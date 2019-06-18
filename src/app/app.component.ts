@@ -18,10 +18,7 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.foodservice.getAllRestaurants().subscribe((data:any)=>{
       console.log(data);
-      // data=data.restaurants.filter(e=>{
-      //   return (e.restaurants.photos !== undefined)?e:null;
-      // })
-      //console.log(data)
+      
       this.restaurants=data.restaurants;
     })
   }
